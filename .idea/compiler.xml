@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="example-graphql-api_main" target="1.8" />
+      <module name="example-graphql-api_test" target="1.8" />
+      <module name="example-graphqls-api_main" target="1.8" />
+      <module name="example-graphqls-api_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

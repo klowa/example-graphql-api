@@ -1,0 +1,10 @@
+[mysqld]
+character_set_server=utf8
+collation-server=utf8_general_ci
+init-connect='SET NAMES utf8'
+skip-character-set-client-handshake
+sql_mode=
+log-error=/var/log/mysql/error.log
+innodb_rollback_on_timeout=OFF
+interactive_timeout=600
+wait_timeout=600

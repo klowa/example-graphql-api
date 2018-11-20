@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: sample-batch
+  servlet:
+    multipart:
+      enabled: true
+      location: /tmp
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:43307/sample?useServerPrepStmts=false&rewriteBatchedStatements=true&characterEncoding=utf8&characterSetResults=utf8&connectTimeout=600000&socketTimeout=600000&zeroDateTimeBehavior=convertToNull&useSSL=false&requireSSL=false&jdbcCompliantTruncation=false&logger=com.mysql.jdbc.log.Slf4JLogger&profileSQL=true
+    username: root
+mybatis:
+  mapper-locations: classpath*:/mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true

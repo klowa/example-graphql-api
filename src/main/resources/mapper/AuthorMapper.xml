@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.infrastructure.mapper.AuthorMapper">
+    <select id="getAuthorById" resultType="com.example.demo.infrastructure.mapper.AuthorEntity">
+        select *
+        from author
+        where id = #{id}
+    </select>
+
+    <insert id="registAuthor">
+        INSERT INTO author (name)
+        VALUES (#{name})
+    </insert>
+</mapper>

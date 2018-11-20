@@ -1,0 +1,25 @@
+type Query {
+    getAuthorById(id: ID!): Author
+}
+
+type Author {
+    id: ID!
+    name: String!
+    books: [Book]!
+}
+
+type Book {
+    id: ID!
+    name: String!
+}
+
+type Mutation {
+    registAuthor(name: String!): RegistAuthor
+    #registBook(authorId: ID!, name: String!): RegistBook
+}
+
+type RegistAuthor {
+    name: String!,
+    regist: Boolean!,
+    error: String
+}
