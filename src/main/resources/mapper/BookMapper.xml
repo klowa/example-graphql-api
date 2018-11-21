@@ -9,4 +9,9 @@
         on book.author_id = author.id
         where book.author_id = #{authorId}
     </select>
+
+    <insert id="registBook">
+        INSERT INTO book (author_id, name)
+        VALUES (#{authorId}, #{name})
+    </insert>
 </mapper>

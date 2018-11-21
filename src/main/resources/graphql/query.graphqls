@@ -5,7 +5,7 @@ type Query {
 type Author {
     id: ID!
     name: String!
-    books: [Book]!
+    books: [Book]
 }
 
 type Book {
@@ -15,10 +15,17 @@ type Book {
 
 type Mutation {
     registAuthor(name: String!): RegistAuthor
-    #registBook(authorId: ID!, name: String!): RegistBook
+    registBook(authorId: ID!, name: String!): RegistBook
 }
 
 type RegistAuthor {
+    name: String!,
+    regist: Boolean!,
+    error: String
+}
+
+type RegistBook {
+    authorId: ID!,
     name: String!,
     regist: Boolean!,
     error: String

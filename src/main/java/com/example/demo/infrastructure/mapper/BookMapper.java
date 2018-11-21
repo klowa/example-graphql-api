@@ -7,4 +7,6 @@ import org.apache.ibatis.annotations.Param;
 @Mapper
 public interface BookMapper {
     List<BookEntity> getBooksByAuthorId(@Param("authorId") int authorId);
+
+    void registBook(@Param("authorId") int authorId, @Param("name") String name);
 }
