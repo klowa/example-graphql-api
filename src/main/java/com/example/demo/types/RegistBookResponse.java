@@ -5,8 +5,9 @@ import lombok.Data;
 
 @Builder
 @Data
-public class RegistAuthor {
+public class RegistBookResponse {
+    private int authorId;
     private String name;
-    private String error;
+    private String errorMessage;
     private boolean regist;
 }

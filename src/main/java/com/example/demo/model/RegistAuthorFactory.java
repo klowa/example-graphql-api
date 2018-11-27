@@ -1,17 +1,17 @@
 package com.example.demo.model;
 
-import com.example.demo.types.RegistAuthor;
+import com.example.demo.types.RegistAuthorResponse;
 import org.springframework.stereotype.Component;
 
 @Component
 public class RegistAuthorFactory {
 
     /**
-     * create name for RegistAuthor
+     * create name for RegistAuthorResponse
      * @param name name
-     * @return RegistAuthor
+     * @return RegistAuthorResponse
      */
-    public RegistAuthor create(String name, boolean regist, String error) {
-        return RegistAuthor.builder().name(name).regist(regist).error(error).build();
+    public RegistAuthorResponse create(String name, boolean regist, String error) {
+        return RegistAuthorResponse.builder().name(name).regist(regist).errorMessage(error).build();
     }
 }

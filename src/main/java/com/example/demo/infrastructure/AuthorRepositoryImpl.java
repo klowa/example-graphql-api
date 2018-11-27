@@ -7,7 +7,7 @@ import com.example.demo.model.RegistAuthorFactory;
 import com.example.demo.model.value.Id;
 import com.example.demo.model.value.Name;
 import com.example.demo.types.Author;
-import com.example.demo.types.RegistAuthor;
+import com.example.demo.types.RegistAuthorResponse;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -26,17 +26,17 @@ public class AuthorRepositoryImpl implements AuthorRepository {
     }
 
     @Override
-    public RegistAuthor registAuthor(Name name) {
+    public RegistAuthorResponse registAuthor(Name name) {
         boolean isRegist = true;
-        String error = null;
+        String errorMessage = null;
         try {
             authorMapper.registAuthor(name.getValue());
         } catch (Exception ex) {
             isRegist = false;
-            error = ex.getMessage();
+            errorMessage = ex.getMessage();
         }
 
-        return registAuthorFactory.create(name.getValue(), isRegist, error);
+        return registAuthorFactory.create(name.getValue(), isRegist, errorMessage);
 
     }
 }
