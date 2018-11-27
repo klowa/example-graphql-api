@@ -1,20 +1,20 @@
 package com.example.demo.model;
 
-import com.example.demo.types.RegistBook;
+import com.example.demo.types.RegistBookResponse;
 import org.springframework.stereotype.Component;
 
 @Component
 public class RegistBookFactory {
 
     /**
-     * create authorId, name for RegistBook
+     * create authorId, name for RegistBookResponse
      * @param authorId authorId
      * @param name name
      * @param regist regist
      * @param error error
-     * @return RegistBook
+     * @return RegistBookResponse
      */
-    public RegistBook create(int authorId, String name, boolean regist, String error) {
-        return RegistBook.builder().authorId(authorId).name(name).regist(regist).error(error).build();
+    public RegistBookResponse create(int authorId, String name, boolean regist, String error) {
+        return RegistBookResponse.builder().authorId(authorId).name(name).regist(regist).errorMessage(error).build();
     }
 }

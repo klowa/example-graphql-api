@@ -6,7 +6,7 @@ import com.example.demo.model.BookRepository;
 import com.example.demo.model.RegistBookFactory;
 import com.example.demo.model.value.AuthorId;
 import com.example.demo.model.value.Name;
-import com.example.demo.types.RegistBook;
+import com.example.demo.types.RegistBookResponse;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -27,7 +27,7 @@ public class BookRepositoryImpl implements BookRepository {
     }
 
     @Override
-    public RegistBook registBook(AuthorId authorId, Name name) {
+    public RegistBookResponse registBook(AuthorId authorId, Name name) {
         boolean isRegist = true;
         String error = null;
         try {
