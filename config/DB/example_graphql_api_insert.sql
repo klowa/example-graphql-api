@@ -10,21 +10,21 @@ INSERT INTO `author` (
                     `id`,
                     `name`)
 VALUES
-	('1','jjo'),
-	('2','tsadakat'),
-	('3','yishii'),
-	('4','kkawaguc'),
-	('5','ryonakam');
+    ('1','jjo1'),
+    ('2','jjo2'),
+    ('3','jjo3'),
+    ('4','jjo4'),
+    ('5','jjo5');
 
 INSERT INTO `book` (
                     `id`,
                     `name`,
                     `author_id`)
 VALUES
-	('1','Elixir入門','1'),
-	('2','Elixir入門','2'),
-	('3','Kotlin入門','1'),
-	('4','Kotlin入門','3'),
-	('5','Spring入門','1'),
-	('6','Docker入門','4'),
-	('7','Java入門', '5');
+    ('1','Elixir入門','1'),
+    ('2','Elixir入門','2'),
+    ('3','Kotlin入門','1'),
+    ('4','Kotlin入門','3'),
+    ('5','Spring入門','1'),
+    ('6','Docker入門','4'),
+    ('7','Java入門', '5');
