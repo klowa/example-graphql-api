@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.infrastructure.mapper.BookMapper">
+    <select id="getBooksByAuthorId" resultType="com.example.demo.infrastructure.mapper.BookEntity">
+        select * from book
+        inner join author
+        on book.author_id = author.id
+        where book.author_id = #{authorId}
+    </select>
+
+    <insert id="registBook">
+        INSERT INTO book (author_id, name)
+        VALUES (#{authorId}, #{name})
+    </insert>
+</mapper>
